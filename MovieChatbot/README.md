@@ -11,6 +11,7 @@ An AI-powered movie expert chatbot leveraging an Agentic Retrieval-Augmented Gen
 ## 🛠 Tech Stack
 - Python
 - LangChain
+- LangGraph
 - OpenAI
 - Qdrant
 - SearchAPI
