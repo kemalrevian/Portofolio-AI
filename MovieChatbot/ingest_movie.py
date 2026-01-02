@@ -82,6 +82,6 @@ client = QdrantClient(
   url= url_qdrant,
   api_key = api_key_qdrant
 )
-#get all collection in your qdrant vector database
 collections_response = client.get_collections()
+
 print("Collections:", collections_response.collections)
