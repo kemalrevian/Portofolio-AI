@@ -1,4 +1,4 @@
-# 🎬 Movie Agentic RAG Chatbot
+# 🎬 Movie Recommendation Chatbot
 An AI-powered movie expert chatbot leveraging an Agentic Retrieval-Augmented Generation (RAG) approach, integrating Qdrant-based vector search and web search APIs to provide reliable movie recommendations
 
 ## 🚀 Features
