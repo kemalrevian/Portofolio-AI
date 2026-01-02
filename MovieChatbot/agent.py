@@ -86,18 +86,15 @@ def qdrant_retriever(query:str):
     """
     FUngsi untuk mengambil konteks dari vector DB yang berisi embedding Wikipedia Movie Plots.
     """
-    # Step 1 — Ambil kandidat dari Qdrant
-    # k besar agar reranker mendapat banyak pilihan
     retrieved = qdrant.similarity_search(
         query=query,
         k=15
     )
 
-    # Step 2 — Rerank dengan cross-encoder
     ranked_docs = rerank_documents(
         query=query,
         retrieved_docs=retrieved,
-        top_k=3   # final documents untuk LLM
+        top_k=3 
     )
     return ranked_docs
 
@@ -152,4 +149,5 @@ def build_agent():
         tools=[search_web,qdrant_retriever],
         prompt=PROMPT_MESSAGES
     )
+
     return store_agent
